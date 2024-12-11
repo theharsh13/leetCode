@@ -51,16 +51,14 @@ public class SplitStrings implements Solution {
         for (char aChar : chars) {
             if (aChar == 'R') {
                 countR++;
-                if ((countR != 0 && countL != 0) && countL == countR) {
+                if (countL == countR) {
                     result++;
-                    countR = countL = 0;
                 }
 
             } else {
                 countL++;
-                if ((countR != 0 && countL != 0) && countL == countR) {
+                if (countL == countR) {
                     result++;
-                    countR = countL = 0;
                 }
             }
         }
